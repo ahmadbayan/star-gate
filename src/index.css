@@ -1,0 +1,243 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100%;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+@font-face {
+  font-family: "AECOMSans";
+  src:
+    local("AECOMSans"),
+    url("./assets/fonts/AECOMSans.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LatoBlack";
+  src:
+    local("LatoBlack"),
+    url("./assets/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LatoBold";
+  src:
+    local("LatoBold"),
+    url("./assets/fonts/Lato-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "LatoLight";
+  src:
+    local("LatoLight"),
+    url("./assets/fonts/Lato-Light.ttf") format("truetype");
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src:
+    local("LatoRegular"),
+    url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "LatoThin";
+  src:
+    local("LatoThin"),
+    url("./assets/fonts/Lato-Thin.ttf") format("truetype");
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "MinionPro";
+  src:
+    local("MinionPro"),
+    url("./assets/fonts/MinionPro-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+.font-aecom {
+  font-family: "AECOMSans";
+}
+
+.font-lato-black {
+  font-family: "LatoBlack";
+}
+
+.font-lato-bold {
+  font-family: "LatoBold";
+}
+
+.font-lato-light {
+  font-family: "LatoLight";
+}
+
+.font-lato-regular {
+  font-family: "LatoRegular";
+}
+
+.font-lato-thin {
+  font-family: "LatoThin";
+}
+
+.font-minion-regular {
+  font-family: "MinionPro";
+}
+
+@layer components {
+  @supports (mask: linear-gradient(to top, transparent, black 25%)) {
+    .bg-header-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: -moz-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent
+      );
+      background: -webkit-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        transparent
+      );
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
+      mask: -moz-linear-gradient(to top, transparent, black 35%);
+      mask: -webkit-linear-gradient(to top, transparent, black 35%);
+      mask: linear-gradient(to top, transparent, black 35%);
+      backdrop-filter: blur(5px);
+    }
+  }
+
+  @supports (mask: linear-gradient(to top, transparent, black 25%)) {
+    .bg-hamburger-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: -moz-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.2)
+      );
+      background: -webkit-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.2)
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8)
+      );
+      mask: -moz-linear-gradient(to top, transparent, black 50%);
+      mask: -webkit-linear-gradient(to top, transparent, black 50%);
+      mask: linear-gradient(to top, transparent, black 60%);
+      backdrop-filter: blur(5px);
+    }
+
+    .bg-hamburger-about-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: -moz-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8)
+      );
+      background: -webkit-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8)
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.8)
+      );
+      mask: -moz-linear-gradient(to top, transparent, black 20%);
+      mask: -webkit-linear-gradient(to top, transparent, black 20%);
+      mask: linear-gradient(to top, transparent, black 20%);
+      backdrop-filter: blur(5px);
+    }
+
+    .bg-home-gradient::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: -moz-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+      background: -webkit-linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+      );
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0.09)
+      );
+      mask: -moz-linear-gradient(to top, transparent, black 10%);
+      mask: -webkit-linear-gradient(to top, transparent, black 10%);
+      mask: linear-gradient(to top, transparent, black 35%);
+      backdrop-filter: blur(4px);
+    }
+  }
+
+  .bg-image-fade::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: -moz-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 10%,
+      rgba(3, 10, 140, 0.1) 54%,
+      rgba(3, 76, 140, 0.09) 66%,
+      rgba(2, 48, 89, 0.08) 74%
+    );
+    background: -webkit-linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 10%,
+      rgba(3, 10, 140, 0.1) 54%,
+      rgba(3, 76, 140, 0.09) 66%,
+      rgba(2, 48, 89, 0.08) 74%
+    );
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.6) 10%,
+      rgba(3, 10, 140, 0.1) 54%,
+      rgba(3, 76, 140, 0.09) 66%,
+      rgba(2, 48, 89, 0.08) 74%
+    );
+
+    max-height: 50%;
+  }
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}

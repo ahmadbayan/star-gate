@@ -1,0 +1,22 @@
+.main__action {
+  animation: scroll-down 3s 5 forwards;
+}
+
+/* Animate scroll icon */
+@keyframes scroll-down {
+  0%,
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+
+  35% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+
+  70% {
+    transform: translateY(-1rem);
+    opacity: 0;
+  }
+}
